@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/devcows/hugo-universal-theme.svg?branch=master)](https://travis-ci.org/devcows/hugo-universal-theme)
 [![Code Climate](https://codeclimate.com/github/devcows/hugo-universal-theme/badges/gpa.svg)](https://codeclimate.com/github/devcows/hugo-universal-theme)
 
-### Theme customized by [palindromordnilap](https://github.com/palindromordnilap) for [Com'Isula](https://www.comisula.com/) (new version not online yet)
+### Theme customized by [palindromordnilap](https://github.com/palindromordnilap) for [Com'Isula](https://www.comisula.com/)
 
 Universal is a clean and stylish website template built with Bootstrap. It stands out with its clean design and elegant typography.
 
