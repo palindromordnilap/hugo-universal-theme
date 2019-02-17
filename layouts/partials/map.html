@@ -2,7 +2,7 @@
   {{ if isset .Site.Params "longitude" }}
       <script>
         function initMap(lat, lon) {
-          var theMap = L.map('map').setView([lat, lon], 11);
+          var theMap = L.map('map').setView([lat, lon], 15);
           L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
             attribution: 'data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
             minZoom: 1,
