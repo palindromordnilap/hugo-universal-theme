@@ -72,3 +72,6 @@
 
 - id: publishedOn
   translation: "le"
+
+- id: in
+  translation: "dans"
