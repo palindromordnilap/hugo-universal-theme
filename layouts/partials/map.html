@@ -1,15 +1,25 @@
 {{ if isset .Site.Params "latitude" }}
   {{ if isset .Site.Params "longitude" }}
+      <script>
+        function initMap(lat, lon) {
+          var theMap = L.map('map').setView([lat, lon], 11);
+          L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+            attribution: 'data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+            minZoom: 1,
+            maxZoom: 20
+          }).addTo(theMap);
+          L.marker([lat, lon]).addTo(theMap);
+        };
+        window.onload = () => {
+          const lat = document.getElementById("lat").value;
+          const lon = document.getElementById("lng").value;
+          initMap(lat, lon);
+        };
+      </script>
       <div class="hidden">
-        <input id="gmap-lat" value="{{ .Site.Params.latitude }}" />
-        <input id="gmap-lng" value="{{ .Site.Params.longitude }}" />
-        <input id="gmap-marker" value="{{ .Site.BaseURL }}img/marker.png" />
-        {{ if isset .Site.Params "direction" }}
-          <input id="gmap-dir" value="{{ .Site.Params.direction }}" />
-        {{ else }}
-          <input id="gmap-dir" value="{{ .Site.Params.latitude }},{{ .Site.Params.longitude }}" />
-        {{ end }}
+        <input id="lat" value="{{ .Site.Params.latitude }}" />
+        <input id="lng" value="{{ .Site.Params.longitude }}" />
       </div>
-      <div id="map" />
+      <div id="map"></div>
   {{ end }}
 {{ end }}
