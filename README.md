@@ -217,6 +217,11 @@ banner = "img/banners/banner-4.jpg"
 
 It must contain a relative path to the banner inside the `static` directory.
 
+Additionally, you can display the banner at the end of the post:
+
+```toml
+showBanner = true
+```
 
 ### Landing page
 
